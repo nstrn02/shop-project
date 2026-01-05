@@ -1,0 +1,275 @@
+body {
+  font-family: 'Scheherazade New', sans-serif;
+  background-color: rgb(240, 238, 238);
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 90px auto 100px; 
+  padding: 20px;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  border-bottom: 1px solid rgb(214, 212, 212);
+  z-index: 1000;
+}
+
+.middle-header {
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.shop {
+  text-decoration: none; 
+  color: black;  
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  margin-left: auto; 
+}
+
+.shop:hover {
+  color: rgb(72, 72, 160);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.right-header a, .right-header a span {
+  text-decoration: none;
+  color: black;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 30px;
+}
+
+@media (max-width: 1000px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .payment-summary {
+    order: -1;  
+  }
+}
+
+@media (max-width: 575px) {
+  .main {
+    padding: 15px;
+    margin-top: 100px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+}
+
+.cart-item-container {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  gap: 20px;
+}
+
+.cart-item-details-grid {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: rgb(72, 72, 160); 
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-quantity {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.delete-item-btn {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 1px solid rgb(106, 106, 165);
+  color: rgb(106, 106, 165);
+  padding: 5px 14px;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.delete-item-btn:hover {
+  background-color: rgb(106, 106, 165);
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .cart-item-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .cart-item-details-grid {
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .delete-item-btn {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart-item-details-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+  }
+
+  .cart-item-details {
+    align-items: center;
+  }
+
+  .product-name {
+    margin-bottom: 10px;
+  }
+
+  .product-quantity {
+    margin-bottom: 15px;
+  }
+
+  .delete-item-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.payment-summary {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.payment-summary-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.payment-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 1px solid rgb(214, 212, 212);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.place-order-button {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(72, 72, 160);
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.place-order-button:hover {
+  background-color: rgb(106, 106, 165);
+}
+
+@media (max-width: 575px) {
+  .payment-summary {
+    padding: 15px;
+  }
+
+  .payment-summary-title {
+    font-size: 17px;
+  }
+
+  .place-order-button {
+    padding: 14px;
+    font-size: 17px;
+  }
+}

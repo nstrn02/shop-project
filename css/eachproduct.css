@@ -1,0 +1,121 @@
+body {
+  font-family: "Scheherazade New", sans-serif;
+  background: rgb(235, 235, 238);
+  margin: 0;
+}
+
+ 
+.product-page {
+  max-width: 1200px;
+  margin: 130px auto;
+  padding: 20px;
+}
+
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 440px; 
+  gap: 30px;
+}
+
+.product-container {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 1px solid rgb(241, 239, 239);
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  flex-shrink: 0;
+}
+
+
+.product-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgb(85, 84, 84);
+  margin-top: 15px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+}
+
+.buy-info {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+
+.product-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(72, 72, 160);
+  margin-bottom: 15px;
+}
+
+
+.product-quantity-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid rgb(212, 211, 211);
+}
+
+
+.add-to-cart {
+  width: 100%;
+  padding: 12px;
+  background: rgb(72, 72, 160);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background: rgb(72, 72, 160);
+}
+
+@media (max-width: 900px) {
+  .product-page {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-info {
+    position: static;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 180px;
+    height: 180px;
+  }
+}
