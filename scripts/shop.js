@@ -15,10 +15,11 @@ let productsHTML = '';
 
 /*getProducts();*/
 
+
 products.forEach((product) => {
   productsHTML = productsHTML + `
     <div class="product-container">
-      <a href="product.html?id=${product.id}" class="product-link">
+      <a href="/product/index.html?id=${product.id}" class="product-link">
         <div class="product-image-container">
           <img class="product-image" src="${product.Image}">
         </div>

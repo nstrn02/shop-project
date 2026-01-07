@@ -11,7 +11,7 @@ products.forEach((product) => {
   if (product.category === category) {
     productsHTML += `
     <div class="product-container">
-      <a href="product.html?id=${product.id}" class="product-link">
+      <a href="/product/index.html?id=${product.id}" class="product-link">
         <div class="product-image-container">
           <img class="product-image" src="${product.Image}">
         </div>
@@ -45,7 +45,7 @@ products.forEach((product) => {
         <div class="product-spacer"></div>
 
         <div class="added-to-cart">
-          <img src="/images/checkmark.png">
+          <img src="/assets/images/checkmark.png">
           اضافه شد
         </div>
 
