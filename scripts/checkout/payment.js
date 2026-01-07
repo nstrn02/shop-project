@@ -1,5 +1,5 @@
-import {cart} from '../cart.js'
-import { getProduct, products } from '../products.js';
+import {cart} from '../../scripts/cart.js'
+import { getProduct, products } from '../../scripts/products.js';
 
 
 export function renderPaymentSummery(){
