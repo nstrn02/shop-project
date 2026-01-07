@@ -1,7 +1,7 @@
 import{cart, addtocart} from './cart.js';
 import { products } from './products.js';
 
-const getProducts = async () => {
+/*const getProducts = async () => {
   try {
     const res = await fetch('/assets/products.json');
     const data = await res.json();
@@ -9,11 +9,11 @@ const getProducts = async () => {
   } catch (error) {
     console.error(error);
   }
-}
+}*/
 
 let productsHTML = '';
 
-getProducts();
+/*getProducts();*/
 
 products.forEach((product) => {
   productsHTML = productsHTML + `
